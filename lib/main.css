@@ -83,8 +83,10 @@ font-size: 20px;
 #startscreen span {
 	color:red;
 }
-#kozak{
+#kozak {
 position: absolute;
-padding: 0px 0px 50px 50px;
+    bottom: 0;
+    left: 0;
+    padding: 0 0 20px 50px;
 }
 
