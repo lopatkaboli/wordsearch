@@ -80,4 +80,7 @@ a:hover {
 textarea, #wordlist{
 font-size: 20px;
 }
+#startscreen span {
+	color:red;
+}
 
