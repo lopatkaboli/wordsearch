@@ -1,0 +1,102 @@
+﻿<html>
+
+<head>
+<title>Word Search Creator</title>
+
+<script type="text/javascript" src="lib/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="lib/progressbar.js"></script>
+<script type="text/javascript" src="lib/colorpicker.js"></script>
+<script type="text/javascript" src="lib/eye.js"></script>
+<script type="text/javascript" src="lib/utils.js"></script>
+<script type="text/javascript" src="lib/main.js"></script>
+<script type="text/javascript" src="lib/layout20b9.js?ver=1.0.2"></script>
+<script type="text/javascript" src="lib/default.js"></script>
+
+<link rel="stylesheet" href="lib/colorpicker.css" type="text/css" />
+<link rel="stylesheet" href="lib/main.css" type="text/css" />
+
+<script type="text/javascript">
+// Preload images
+function preload(sources) {
+	jQuery.each(sources, function(i,source) { jQuery.get(source); });
+}
+preload([
+	'img/l.gif',
+	'img/start1.png',
+	'img/start0.png',
+	'img/c.png',
+	'img/n.png',
+	'img/s.png',
+	'img/e.png',
+	'img/w.png',
+	'img/ne.png',
+	'img/se.png',
+	'img/nw.png',
+	'img/sw.png',
+	'img/h.png',
+	'img/v.png',
+	'img/down.png',
+	'img/up.png',
+	'img/c-ne.png',
+	'img/c-se.png',
+	'img/c-nw.png',
+	'img/c-sw.png',
+	'img/progress.html',
+	'img/progressbg_green.gif',
+	'img/progressbg_orange.gif',
+	'img/progressbg_red.gif',
+	'img/progressbg_yellow.gif',
+	'img/new0.png',
+	'img/new1.png',
+	'img/printable0.png',
+	'img/printable1.png',
+	'img/open.cur'
+]);
+</script>
+
+</head><body onmouseup="ws.outOfGrid()">
+
+<center>
+<div id="content">
+
+<div id="loadscreen">
+	<br /><br /><br /><br /><img src="img/l.gif" /><br /><br />
+	&nbsp;&nbsp;&nbsp;Завантаження...
+</div>
+
+<div id="startscreen">
+	Знайди слова сховані в сітці з буквами.<br /> <b>Відгадай слово, яке заховано!</b><br /><br />
+	<textarea disabled id="opt_words" onchange="ws.setCookie('ws_list',$('#opt_words').val(),'365')"></textarea><br />
+	
+	<br /><br /><center><img src="img/start1.png" id="btn_start" onclick="ws.startGame()" /></center>
+	</td>
+	</tr></table>
+</div>
+
+<div id="wordscreen">
+	<br />
+	
+	<div id="pbar"><span class="progressBar" id="pb1">0%</span></div>
+	<div id="timer">0:00</div>
+	<table cellpadding="0" cellspacing="50" border="0"><tr>
+	<td id="wordsearch"></td>
+	<td id="wordlist" valign="top"></td>
+	</tr></table>
+
+	<table cellpadding="0" cellspacing="5" border="0" id="buttons"><tr>
+	<td><a href="index.html"><img src="img/new1.png" border="0" id="btn_new" /></a></td>
+	</tr></table>
+</div>
+
+<div id="adscreen">
+Вітаю! Знайдено слово <span>"Козак"</span>.<br /></div>
+
+</div>
+</center>
+
+<div id="debug"></div>
+
+
+</body>
+
+</html>
