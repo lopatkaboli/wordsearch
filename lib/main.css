@@ -89,5 +89,9 @@ font-size: 20px;
     bottom: 0;
     left: 360px;
     padding: 0 0 20px 50px;
+	z-index:1;
+}
+*{
+	z-index:2;
 }
 
